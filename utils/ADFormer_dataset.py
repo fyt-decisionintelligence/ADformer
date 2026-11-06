@@ -22,13 +22,14 @@ class ADFormerDataset():
         self.interval = args.time_interval
         self.points_per_hour = 3600 // self.interval
         self.num_reg = args.num_reg
+        os.makedirs('./cache', exist_ok=True)
 
         if self.args.dataset_name == 'NYC-Taxi':
             self.data_files = ['./data/NYC_Taxi_origin.pkl', './data/NYC_Taxi_destination.pkl']
         elif self.args.dataset_name == 'NYC-Bike':
             self.data_files = ['./data/NYC_Bike_origin.pkl', './data/NYC_Bike_destination.pkl']
         elif self.args.dataset_name == 'XIAN-Taxi':
-            self.data_files = ['./data/XIAN_Taxi_origin.pkl', './data/XIAN_Taxi_destination.pkl']
+            self.data_files = ['./data/xian_Taxi_origin.pkl', './data/xian_Taxi_destination.pkl']
 
         self.get_matrixes()
         self.get_dtw()
@@ -212,11 +213,14 @@ class ADFormerDataset():
                         dist = geodesic(latlon1, latlon2).meters
                         dist_mx[i, j] = dist_mx[j, i] = dist
 
+            # NYC-Taxi and NYC-Bike share this cache and may start together.
+            temp_path = f'{cache_matrix_file_path}.{os.getpid()}.tmp.npz'
             np.savez_compressed(
-                cache_matrix_file_path,
+                temp_path,
                 adj_mx = adj_mx,
                 dist_mx = dist_mx
             )
+            os.replace(temp_path, cache_matrix_file_path)
             
         self.logger.info(f'Loading  adj_mx/dist_mx  from {cache_matrix_file_path}.')
         matrixes = np.load(cache_matrix_file_path)

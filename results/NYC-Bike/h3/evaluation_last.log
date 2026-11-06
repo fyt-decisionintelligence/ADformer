@@ -1,0 +1,10 @@
+2026-11-04 15:58:10: Evaluating FINAL epoch 120 checkpoint: /home/ares/test/ADFormer/log/ADFormer/NYC-Bike/full_20261104_144924_NYC-Bike_gpu0_w6_h3_epochs120_bs64/model_last_state.pth; physical GPU 2
+2026-11-04 15:58:10: Loading  adj_mx/dist_mx  from ./cache/NYC_matrixes.npz.
+2026-11-04 15:58:10: Load DTW matrix from ./cache/NYC-Bike_dtwmx.npy
+2026-11-04 15:58:11: Loading splited dataset from ./cache/NYC-Bike_split_dataset_6_3.npz
+2026-11-04 15:58:16: train x: (12258, 6, 263, 10), y: (12258, 3, 263, 10)
+2026-11-04 15:58:16: val x: (1752, 6, 263, 10), y: (1752, 3, 263, 10)
+2026-11-04 15:58:16: test x: (3502, 6, 263, 10), y: (3502, 3, 263, 10)
+2026-11-04 15:58:17: Standard Scaler mean: 7.562257471957477, std: 17.548189877769882
+2026-11-04 15:58:23: prediction on 3 steps, MAE:  3.5476, RMSE:  5.6665, MAPE:  26.1921
+2026-11-04 15:58:24: Final-checkpoint evaluation and finite-prediction checks passed.

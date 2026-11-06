@@ -1,0 +1,191 @@
+[
+  {
+    "dataset": "XIAN-Taxi",
+    "horizon": 1,
+    "prediction_minutes": 30,
+    "epoch": 120,
+    "checkpoint": "log/ADFormer/XIAN-Taxi/full_20261104_093625_XIAN-Taxi_gpu0_w6_h1_epochs120_bs64/model_last_state.pth",
+    "checkpoint_sha256": "2586397e0401552de95ff71da5f26dadecf4af2e2cf031da3b69f4c46f3208b9",
+    "physical_gpu": 0,
+    "output_directory": "log/ADFormer/XIAN-Taxi/full_20261104_093625_XIAN-Taxi_gpu0_w6_h1_epochs120_bs64/last_epoch_test/last_epoch120_20261104_155756",
+    "MAE": 3.537567138671875,
+    "RMSE": 5.177030563354492,
+    "MAPE_percent": 22.684644162654877,
+    "prediction_shape": [
+      584,
+      1,
+      135,
+      2
+    ],
+    "metric_mask": 0.5,
+    "mape_mask": 5.0
+  },
+  {
+    "dataset": "XIAN-Taxi",
+    "horizon": 3,
+    "prediction_minutes": 90,
+    "epoch": 120,
+    "checkpoint": "log/ADFormer/XIAN-Taxi/full_20261104_121816_XIAN-Taxi_gpu0_w6_h3_epochs120_bs64/model_last_state.pth",
+    "checkpoint_sha256": "9f340b7d6f67a3a49ba9a18e9cb7b8c36f00f4993c9bde8482feecb73ce998fa",
+    "physical_gpu": 0,
+    "output_directory": "log/ADFormer/XIAN-Taxi/full_20261104_121816_XIAN-Taxi_gpu0_w6_h3_epochs120_bs64/last_epoch_test/last_epoch120_20261104_155756",
+    "MAE": 3.7410717010498047,
+    "RMSE": 5.527371406555176,
+    "MAPE_percent": 22.755691409111023,
+    "prediction_shape": [
+      584,
+      3,
+      135,
+      2
+    ],
+    "metric_mask": 0.5,
+    "mape_mask": 5.0
+  },
+  {
+    "dataset": "XIAN-Taxi",
+    "horizon": 6,
+    "prediction_minutes": 180,
+    "epoch": 120,
+    "checkpoint": "log/ADFormer/XIAN-Taxi/full_20261104_144924_XIAN-Taxi_gpu1_w6_h6_epochs120_bs64/model_last_state.pth",
+    "checkpoint_sha256": "9a91b3d18f2ef107bda0c4c631b55fb4edcc97ecdc1ee2b8b4d3d4d4c810fda8",
+    "physical_gpu": 0,
+    "output_directory": "log/ADFormer/XIAN-Taxi/full_20261104_144924_XIAN-Taxi_gpu1_w6_h6_epochs120_bs64/last_epoch_test/last_epoch120_20261104_155756",
+    "MAE": 5.456833362579346,
+    "RMSE": 10.060229301452637,
+    "MAPE_percent": 27.58133113384247,
+    "prediction_shape": [
+      583,
+      6,
+      135,
+      2
+    ],
+    "metric_mask": 0.5,
+    "mape_mask": 5.0
+  },
+  {
+    "dataset": "NYC-Taxi",
+    "horizon": 1,
+    "prediction_minutes": 30,
+    "epoch": 120,
+    "checkpoint": "log/ADFormer/NYC-Taxi/full_20261104_093625_NYC-Taxi_gpu1_w6_h1_epochs120_bs64/model_last_state.pth",
+    "checkpoint_sha256": "c7f0b6811e86d1afca7a610335d640106e7f67a2a2c05ee0741be93204b4e804",
+    "physical_gpu": 1,
+    "output_directory": "log/ADFormer/NYC-Taxi/full_20261104_093625_NYC-Taxi_gpu1_w6_h1_epochs120_bs64/last_epoch_test/last_epoch120_20261104_155756",
+    "MAE": 5.500046730041504,
+    "RMSE": 11.401689529418945,
+    "MAPE_percent": 18.451406061649323,
+    "prediction_shape": [
+      3512,
+      1,
+      263,
+      2
+    ],
+    "metric_mask": 0.5,
+    "mape_mask": 5.0
+  },
+  {
+    "dataset": "NYC-Taxi",
+    "horizon": 3,
+    "prediction_minutes": 90,
+    "epoch": 120,
+    "checkpoint": "log/ADFormer/NYC-Taxi/full_20261104_121816_NYC-Taxi_gpu1_w6_h3_epochs120_bs64/model_last_state.pth",
+    "checkpoint_sha256": "56d5dd37f991439d7eb1ec21bf8f21a7d5b5c24756dafa12ce5684ef6ee27d2f",
+    "physical_gpu": 1,
+    "output_directory": "log/ADFormer/NYC-Taxi/full_20261104_121816_NYC-Taxi_gpu1_w6_h3_epochs120_bs64/last_epoch_test/last_epoch120_20261104_155756",
+    "MAE": 6.183656692504883,
+    "RMSE": 13.66836929321289,
+    "MAPE_percent": 21.10772579908371,
+    "prediction_shape": [
+      3512,
+      3,
+      263,
+      2
+    ],
+    "metric_mask": 0.5,
+    "mape_mask": 5.0
+  },
+  {
+    "dataset": "NYC-Taxi",
+    "horizon": 6,
+    "prediction_minutes": 180,
+    "epoch": 120,
+    "checkpoint": "log/ADFormer/NYC-Taxi/full_20261104_144924_NYC-Taxi_gpu2_w6_h6_epochs120_bs64/model_last_state.pth",
+    "checkpoint_sha256": "c865aa69f27a6fb38b09ed78054787e12ddec4469a47d550a0e32cf758c235bd",
+    "physical_gpu": 1,
+    "output_directory": "log/ADFormer/NYC-Taxi/full_20261104_144924_NYC-Taxi_gpu2_w6_h6_epochs120_bs64/last_epoch_test/last_epoch120_20261104_155756",
+    "MAE": 6.8398637771606445,
+    "RMSE": 15.119797706604004,
+    "MAPE_percent": 21.994483470916748,
+    "prediction_shape": [
+      3511,
+      6,
+      263,
+      2
+    ],
+    "metric_mask": 0.5,
+    "mape_mask": 5.0
+  },
+  {
+    "dataset": "NYC-Bike",
+    "horizon": 1,
+    "prediction_minutes": 30,
+    "epoch": 120,
+    "checkpoint": "log/ADFormer/NYC-Bike/full_20261104_093625_NYC-Bike_gpu2_w6_h1_epochs120_bs64/model_last_state.pth",
+    "checkpoint_sha256": "c00fa54975515a65e66b7c1a511a3ca31e392497cf7e62fe3c559a2430d46bdd",
+    "physical_gpu": 2,
+    "output_directory": "log/ADFormer/NYC-Bike/full_20261104_093625_NYC-Bike_gpu2_w6_h1_epochs120_bs64/last_epoch_test/last_epoch120_20261104_155756",
+    "MAE": 3.282097578048706,
+    "RMSE": 5.088165283203125,
+    "MAPE_percent": 24.45724308490753,
+    "prediction_shape": [
+      3503,
+      1,
+      263,
+      2
+    ],
+    "metric_mask": 0.5,
+    "mape_mask": 5.0
+  },
+  {
+    "dataset": "NYC-Bike",
+    "horizon": 3,
+    "prediction_minutes": 90,
+    "epoch": 120,
+    "checkpoint": "log/ADFormer/NYC-Bike/full_20261104_144924_NYC-Bike_gpu0_w6_h3_epochs120_bs64/model_last_state.pth",
+    "checkpoint_sha256": "4b6f6d264b2424bcf7d0d38a8ba9ccd4447a5059e0c5d20dcbae40100bc2ce2d",
+    "physical_gpu": 2,
+    "output_directory": "log/ADFormer/NYC-Bike/full_20261104_144924_NYC-Bike_gpu0_w6_h3_epochs120_bs64/last_epoch_test/last_epoch120_20261104_155756",
+    "MAE": 3.547623634338379,
+    "RMSE": 5.666522026062012,
+    "MAPE_percent": 26.192110776901245,
+    "prediction_shape": [
+      3502,
+      3,
+      263,
+      2
+    ],
+    "metric_mask": 0.5,
+    "mape_mask": 5.0
+  },
+  {
+    "dataset": "NYC-Bike",
+    "horizon": 6,
+    "prediction_minutes": 180,
+    "epoch": 120,
+    "checkpoint": "log/ADFormer/NYC-Bike/full_20261104_144924_NYC-Bike_gpu3_w6_h6_epochs120_bs64/model_last_state.pth",
+    "checkpoint_sha256": "46543704c30a9819a8b9b7001fd374b62f58d1334c0aff7d723f684882805932",
+    "physical_gpu": 2,
+    "output_directory": "log/ADFormer/NYC-Bike/full_20261104_144924_NYC-Bike_gpu3_w6_h6_epochs120_bs64/last_epoch_test/last_epoch120_20261104_155756",
+    "MAE": 4.049575328826904,
+    "RMSE": 6.768675327301025,
+    "MAPE_percent": 32.389140129089355,
+    "prediction_shape": [
+      3502,
+      6,
+      263,
+      2
+    ],
+    "metric_mask": 0.5,
+    "mape_mask": 5.0
+  }
+]

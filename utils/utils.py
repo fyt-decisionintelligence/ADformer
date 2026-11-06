@@ -22,7 +22,7 @@ def get_logger(log_dir, name=None):
     if logger.hasHandlers():
         logger.handlers.clear()
         
-    formatter = logging.Formatter('%(asctime)s: %(message)s', "%Y-%m-%d %H:%M")
+    formatter = logging.Formatter('%(asctime)s: %(message)s', "%Y-%m-%d %H:%M:%S")
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.INFO)
     console_handler.setFormatter(formatter)

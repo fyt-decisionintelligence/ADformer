@@ -1,0 +1,10 @@
+2026-11-04 15:57:58: Evaluating FINAL epoch 120 checkpoint: /home/ares/test/ADFormer/log/ADFormer/XIAN-Taxi/full_20261104_093625_XIAN-Taxi_gpu0_w6_h1_epochs120_bs64/model_last_state.pth; physical GPU 0
+2026-11-04 15:57:58: Loading  adj_mx/dist_mx  from ./cache/XIAN_matrixes.npz.
+2026-11-04 15:57:58: Load DTW matrix from ./cache/XIAN-Taxi_dtwmx.npy
+2026-11-04 15:58:00: Loading splited dataset from ./cache/XIAN-Taxi_split_dataset_6_1.npz
+2026-11-04 15:58:01: train x: (2045, 6, 135, 10), y: (2045, 1, 135, 10)
+2026-11-04 15:58:01: val x: (293, 6, 135, 10), y: (293, 1, 135, 10)
+2026-11-04 15:58:01: test x: (584, 6, 135, 10), y: (584, 1, 135, 10)
+2026-11-04 15:58:01: Standard Scaler mean: 14.524651513779467, std: 17.708245200180595
+2026-11-04 15:58:02: prediction on 1 steps, MAE:  3.5376, RMSE:  5.1770, MAPE:  22.6846
+2026-11-04 15:58:02: Final-checkpoint evaluation and finite-prediction checks passed.

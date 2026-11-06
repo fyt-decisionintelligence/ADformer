@@ -1,0 +1,21 @@
+{
+  "dataset": "NYC-Bike",
+  "horizon": 1,
+  "prediction_minutes": 30,
+  "epoch": 120,
+  "checkpoint": "log/ADFormer/NYC-Bike/full_20261104_093625_NYC-Bike_gpu2_w6_h1_epochs120_bs64/model_last_state.pth",
+  "checkpoint_sha256": "c00fa54975515a65e66b7c1a511a3ca31e392497cf7e62fe3c559a2430d46bdd",
+  "physical_gpu": 2,
+  "output_directory": "log/ADFormer/NYC-Bike/full_20261104_093625_NYC-Bike_gpu2_w6_h1_epochs120_bs64/last_epoch_test/last_epoch120_20261104_155756",
+  "MAE": 3.282097578048706,
+  "RMSE": 5.088165283203125,
+  "MAPE_percent": 24.45724308490753,
+  "prediction_shape": [
+    3503,
+    1,
+    263,
+    2
+  ],
+  "metric_mask": 0.5,
+  "mape_mask": 5.0
+}

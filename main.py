@@ -19,7 +19,7 @@ def run_model(model_name, mode, start_time, test_dir=None):
             saved_args = json.load(f)
             args = argparse.Namespace(**saved_args)
 
-    args.exp_id = start_time
+    args.exp_id = (args.exp_id or start_time) if mode == 'train' else start_time
     args.log_dir = utils.get_log_dir(model_name, args.dataset_name, args.exp_id)
     
     if mode == 'train':
@@ -41,25 +41,21 @@ def run_model(model_name, mode, start_time, test_dir=None):
     trainer = ADFormerTrainer(args, model, logger)
     if mode == 'train':
         trainer.train(train_dataloader, val_dataloader)
-        model.load_state_dict(torch.load(os.path.join(args.log_dir, 'model_best_state.pth')))
+        model.load_state_dict(torch.load(os.path.join(args.log_dir, 'model_best_state.pth'), weights_only=True))
         trainer.evaluate(test_dataloader)
     elif mode == 'test':
         best_model_path = os.path.join(test_dir, 'model_best_state.pth')
         logger.info(f'Loading trained model from {best_model_path}')
-        model.load_state_dict(torch.load(best_model_path))
+        model.load_state_dict(torch.load(best_model_path, weights_only=True))
         trainer.evaluate(test_dataloader)
 
 
 if __name__ == '__main__':
 
-    start_time = datetime.now().strftime("%m-%d_%H-%M")
+    start_time = datetime.now().strftime("%m-%d_%H-%M-%S")
     run_model(
         model_name='ADFormer', 
         mode='train',
         start_time=start_time,
         test_dir=None,
     )
-        
-    
-    
-    

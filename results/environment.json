@@ -1,0 +1,31 @@
+{
+  "python": "3.10.12",
+  "packages": {
+    "torch": "2.4.1+cu118",
+    "flash-attn": "2.6.3",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "pandas": "2.2.3",
+    "geopandas": "1.0.1",
+    "pyogrio": "0.10.0",
+    "pyproj": "3.6.1",
+    "shapely": "2.0.6",
+    "geopy": "2.4.1",
+    "h3": "3.7.7",
+    "tqdm": "4.66.5",
+    "fastdtw": "0.3.4",
+    "einops": "0.8.1"
+  },
+  "cuda_runtime": "11.8",
+  "physical_gpu": 3,
+  "gpu_name": "NVIDIA A800-SXM4-80GB",
+  "compute_capability": [
+    8,
+    0
+  ],
+  "flash_attention_forward_backward": "passed",
+  "h3_legacy_api": "passed",
+  "fastdtw_compiled_extension": "passed",
+  "nyc_geographic_rows": 263,
+  "nyc_unique_location_ids": 263
+}

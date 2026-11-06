@@ -1,0 +1,17 @@
+# Tested with Python 3.10 on Linux x86_64 and an NVIDIA A800.
+# Install numpy/Cython first; see README.md for the setup commands.
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch==2.4.1+cu118
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.2.3
+geopandas==1.0.1
+pyogrio==0.10.0
+pyproj==3.6.1
+shapely==2.0.6
+geopy==2.4.1
+h3==3.7.7
+tqdm==4.66.5
+fastdtw==0.3.4
+einops==0.8.1
+flash-attn @ https://github.com/Dao-AILab/flash-attention/releases/download/v2.6.3/flash_attn-2.6.3+cu118torch2.4cxx11abiFALSE-cp310-cp310-linux_x86_64.whl

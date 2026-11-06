@@ -1,0 +1,10 @@
+2026-11-04 15:58:11: Evaluating FINAL epoch 120 checkpoint: /home/ares/test/ADFormer/log/ADFormer/NYC-Taxi/full_20261104_121816_NYC-Taxi_gpu1_w6_h3_epochs120_bs64/model_last_state.pth; physical GPU 1
+2026-11-04 15:58:11: Loading  adj_mx/dist_mx  from ./cache/NYC_matrixes.npz.
+2026-11-04 15:58:11: Load DTW matrix from ./cache/NYC-Taxi_dtwmx.npy
+2026-11-04 15:58:11: Loading splited dataset from ./cache/NYC-Taxi_split_dataset_6_3.npz
+2026-11-04 15:58:17: train x: (12292, 6, 263, 10), y: (12292, 3, 263, 10)
+2026-11-04 15:58:17: val x: (1756, 6, 263, 10), y: (1756, 3, 263, 10)
+2026-11-04 15:58:17: test x: (3512, 6, 263, 10), y: (3512, 3, 263, 10)
+2026-11-04 15:58:18: Standard Scaler mean: 32.18968010456995, std: 74.46333216906135
+2026-11-04 15:58:24: prediction on 3 steps, MAE:  6.1837, RMSE:  13.6684, MAPE:  21.1077
+2026-11-04 15:58:24: Final-checkpoint evaluation and finite-prediction checks passed.

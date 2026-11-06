@@ -1,0 +1,6 @@
+{
+  "completed_epochs": 120,
+  "requested_epochs": 120,
+  "best_epoch": 108,
+  "best_val_loss": 3.1612987995147703
+}

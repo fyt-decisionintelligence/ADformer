@@ -1,0 +1,47 @@
+# Validated Python 3.10 / Linux x86_64 environment. Bootstrap as documented in README.md.
+--extra-index-url https://download.pytorch.org/whl/cu118
+certifi==2026.10.23
+Cython==0.29.37
+einops==0.8.1
+fastdtw==0.3.4
+filelock==4.1.0
+flash-attn @ https://github.com/Dao-AILab/flash-attention/releases/download/v2.6.3/flash_attn-2.6.3+cu118torch2.4cxx11abiFALSE-cp310-cp310-linux_x86_64.whl#sha256=54e0a7eb80bac9ef0a759f7952202688e514c68c79370e642701b968c8e29ce1
+fsspec==2026.9.0
+geographiclib==2.1
+geopandas==1.0.1
+geopy==2.4.1
+h3==3.7.7
+Jinja2==3.1.6
+MarkupSafe==3.0.3
+mpmath==1.3.0
+networkx==3.4.2
+numpy==1.26.4
+nvidia-cublas-cu11==11.11.3.6
+nvidia-cuda-cupti-cu11==11.8.87
+nvidia-cuda-nvrtc-cu11==11.8.89
+nvidia-cuda-runtime-cu11==11.8.89
+nvidia-cudnn-cu11==9.1.0.70
+nvidia-cufft-cu11==10.9.0.58
+nvidia-curand-cu11==10.3.0.86
+nvidia-cusolver-cu11==11.4.1.48
+nvidia-cusparse-cu11==11.7.5.86
+nvidia-nccl-cu11==2.20.5
+nvidia-nvtx-cu11==11.8.86
+packaging==26.3
+pandas==2.2.3
+pip==25.0.1
+pyogrio==0.10.0
+pyproj==3.6.1
+python-dateutil==3.0.0
+pytz==2026.6
+scipy==1.13.1
+setuptools==75.8.0
+shapely==2.0.6
+six==1.17.0
+sympy==1.14.0
+torch==2.4.1+cu118
+tqdm==4.66.5
+triton==3.0.0
+typing_extensions==4.16.0
+tzdata==2026.6
+wheel==0.45.1

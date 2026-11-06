@@ -3,6 +3,8 @@ import os
 import torch.nn.functional as F
 import time
 import numpy as np
+import csv
+import json
 from utils.utils import mae, rmse, mape
 from utils.utils import WarmupCosineAnnealingLR
 
@@ -29,12 +31,22 @@ class ADFormerTrainer():
                                                             warmup_lr_init=self.args.lr_warmup_init, eta_min=self.args.lr_eta_min)
                 
         min_val_loss = float('inf')
+        wait = 0
+        best_epoch = None
+        history_path = os.path.join(self.args.log_dir, 'training_history.csv')
+        with open(history_path, 'w', newline='') as history_file:
+            csv.writer(history_file).writerow([
+                'epoch', 'train_loss', 'val_loss', 'learning_rate',
+                'train_seconds', 'validation_seconds',
+            ])
         for epoch_idx in range(self.args.epochs):
             t1 = time.time()
             train_loss = self.train_epoch(train_dataloader)
             t2 = time.time()
             val_loss = self.val_epoch(val_dataloader)
             t3 = time.time()
+            if not np.isfinite([train_loss, val_loss]).all():
+                raise RuntimeError(f'Non-finite loss at epoch {epoch_idx + 1}: train={train_loss}, val={val_loss}')
 
             if self.args.lr_decay:
                 if self.args.lr_scheduler == 'WarmupCosineAnnealingLR':
@@ -44,11 +56,16 @@ class ADFormerTrainer():
             log_message = 'Epoch {}, train loss: {:.4f}; val loss: {:.4f}; lr: {:.6f}, t1: {:.2f}s, t2: {:.2f}s'. \
                 format(epoch_idx, train_loss, val_loss, log_lr, t2-t1, t3-t2)
             self.logger.info(log_message)
+            with open(history_path, 'a', newline='') as history_file:
+                csv.writer(history_file).writerow([
+                    epoch_idx + 1, train_loss, val_loss, log_lr, t2 - t1, t3 - t2,
+                ])
 
             if val_loss < min_val_loss:
                 wait = 0
                 self.logger.info(f'Val loss decreases from {min_val_loss: .4f} to {val_loss: .4f}')
                 min_val_loss = val_loss
+                best_epoch = epoch_idx + 1
                 torch.save(self.model.state_dict(), os.path.join(self.args.log_dir, 'model_best_state.pth'))
             else:
                 wait += 1
@@ -56,7 +73,13 @@ class ADFormerTrainer():
                     self.logger.info(f"No improvement with {wait} epoches, training stop at epoch {epoch_idx}.")
                     break
 
-        self.logger.info('Training stop ...... start to evaluate')
+        torch.save(self.model.state_dict(), os.path.join(self.args.log_dir, 'model_last_state.pth'))
+        with open(os.path.join(self.args.log_dir, 'training_summary.json'), 'w') as summary_file:
+            json.dump({
+                'completed_epochs': epoch_idx + 1, 'requested_epochs': self.args.epochs,
+                'best_epoch': best_epoch, 'best_val_loss': float(min_val_loss),
+            }, summary_file, indent=2)
+        self.logger.info(f'Completed {epoch_idx + 1}/{self.args.epochs} epochs; start to evaluate')
 
     
     def train_epoch(self, dataloader):
@@ -121,3 +144,9 @@ class ADFormerTrainer():
             MAPE= mape(real_y, pred_y)
 
             self.logger.info(f'prediction on {real_y.shape[1]} steps, MAE: {MAE: .4f}, RMSE: {RMSE: .4f}, MAPE: {MAPE: .4f}')
+            with open(os.path.join(self.args.log_dir, 'metrics.json'), 'w') as metrics_file:
+                json.dump({
+                    'MAE': float(MAE), 'RMSE': float(RMSE), 'MAPE_percent': float(MAPE),
+                    'prediction_shape': list(pred_y.shape),
+                    'metric_mask': self.args.metric_mask, 'mape_mask': 5.0,
+                }, metrics_file, indent=2)

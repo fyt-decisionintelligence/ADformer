@@ -1,0 +1,162 @@
+2026-11-04 09:37:42: Start Experiment at full_20261104_093625_NYC-Bike_gpu2_w6_h1_epochs120_bs64, dataset: NYC-Bike, model: ADFormer, mode: train
+2026-11-04 09:37:42: Experiment Configuration: {'device': device(type='cuda', index=0), 'exp_id': 'full_20261104_093625_NYC-Bike_gpu2_w6_h1_epochs120_bs64', 'dataset_city': 'NYC', 'dataset_name': 'NYC-Bike', 'time_interval': 1800, 'num_reg': 263, 'load_external': True, 'window': 6, 'horizon': 1, 'output_dim': 2, 'train_rate': 0.7, 'val_rate': 0.1, 'metric_mask': 0.5, 'embed_dim': 64, 'skip_dim': 256, 'SE_dim': 8, 's_heads': 3, 'sa_heads': 2, 't_heads': 2, 'ta_heads': 1, 'cluster_seg_num': 2, 'bal_cls': True, 'cls_tolerance': 0.7, 'cluster_reg_nums': '[64,16]', 'swiglu_ratio': 2.6666666666666665, 'mlp_ratio': 4, 'attn_drop': 0.0, 'agg_drop': 0.1, 'drop_path': 0.3, 'depth': 6, 'batch_size': 64, 'epochs': 120, 'learning_rate': 0.001, 'lr_epsilon': 1e-08, 'lr_beta1': 0.9, 'lr_beta2': 0.999, 'weight_decay': 0.05, 'lr_decay': True, 'lr_scheduler': 'WarmupCosineAnnealingLR', 'lr_warmup_init': 1e-06, 'lr_warmup_epoch': 5, 'lr_T_max': 60, 'lr_eta_min': 0.0001, 'lr_decay_ratio': 0.1, 'clip_grad_norm': True, 'max_grad_norm': 5, 'use_early_stop': False, 'patience': 50, 'log_dir': './log/ADFormer/NYC-Bike/full_20261104_093625_NYC-Bike_gpu2_w6_h1_epochs120_bs64'}
+2026-11-04 09:37:42: Loading  adj_mx/dist_mx  from ./cache/NYC_matrixes.npz.
+2026-11-04 09:37:42: Load DTW matrix from ./cache/NYC-Bike_dtwmx.npy
+2026-11-04 09:37:45: Loading splited dataset from ./cache/NYC-Bike_split_dataset_6_1.npz
+2026-11-04 09:37:49: train x: (12260, 6, 263, 10), y: (12260, 1, 263, 10)
+2026-11-04 09:37:49: val x: (1751, 6, 263, 10), y: (1751, 1, 263, 10)
+2026-11-04 09:37:49: test x: (3503, 6, 263, 10), y: (3503, 1, 263, 10)
+2026-11-04 09:37:50: Standard Scaler mean: 7.562904237920675, std: 17.548908812261605
+2026-11-04 09:37:52: Start training ......
+2026-11-04 09:38:22: Epoch 0, train loss: 10.3071; val loss: 11.5572; lr: 0.000201, t1: 28.85s, t2: 1.14s
+2026-11-04 09:38:22: Val loss decreases from  inf to  11.5572
+2026-11-04 09:38:52: Epoch 1, train loss: 4.1929; val loss: 3.8868; lr: 0.000401, t1: 28.26s, t2: 1.14s
+2026-11-04 09:38:52: Val loss decreases from  11.5572 to  3.8868
+2026-11-04 09:39:21: Epoch 2, train loss: 2.4437; val loss: 2.5437; lr: 0.000600, t1: 28.26s, t2: 1.14s
+2026-11-04 09:39:21: Val loss decreases from  3.8868 to  2.5437
+2026-11-04 09:39:50: Epoch 3, train loss: 2.0427; val loss: 2.3458; lr: 0.000800, t1: 28.23s, t2: 1.14s
+2026-11-04 09:39:50: Val loss decreases from  2.5437 to  2.3458
+2026-11-04 09:40:20: Epoch 4, train loss: 1.9155; val loss: 2.3047; lr: 0.001000, t1: 28.21s, t2: 1.14s
+2026-11-04 09:40:20: Val loss decreases from  2.3458 to  2.3047
+2026-11-04 09:40:49: Epoch 5, train loss: 1.8364; val loss: 2.1285; lr: 0.000999, t1: 28.24s, t2: 1.12s
+2026-11-04 09:40:49: Val loss decreases from  2.3047 to  2.1285
+2026-11-04 09:41:19: Epoch 6, train loss: 1.7879; val loss: 2.0992; lr: 0.000998, t1: 28.19s, t2: 1.14s
+2026-11-04 09:41:19: Val loss decreases from  2.1285 to  2.0992
+2026-11-04 09:41:48: Epoch 7, train loss: 1.7518; val loss: 1.9814; lr: 0.000994, t1: 28.03s, t2: 1.13s
+2026-11-04 09:41:48: Val loss decreases from  2.0992 to  1.9814
+2026-11-04 09:42:17: Epoch 8, train loss: 1.7227; val loss: 2.0169; lr: 0.000990, t1: 27.93s, t2: 1.14s
+2026-11-04 09:42:46: Epoch 9, train loss: 1.7017; val loss: 2.0164; lr: 0.000985, t1: 27.93s, t2: 1.13s
+2026-11-04 09:43:15: Epoch 10, train loss: 1.7056; val loss: 1.9672; lr: 0.000978, t1: 27.93s, t2: 1.14s
+2026-11-04 09:43:15: Val loss decreases from  1.9814 to  1.9672
+2026-11-04 09:43:44: Epoch 11, train loss: 1.6867; val loss: 1.9399; lr: 0.000970, t1: 27.99s, t2: 1.12s
+2026-11-04 09:43:44: Val loss decreases from  1.9672 to  1.9399
+2026-11-04 09:44:13: Epoch 12, train loss: 1.6734; val loss: 2.0001; lr: 0.000961, t1: 27.85s, t2: 1.14s
+2026-11-04 09:44:42: Epoch 13, train loss: 1.6636; val loss: 1.8997; lr: 0.000951, t1: 28.05s, t2: 1.12s
+2026-11-04 09:44:42: Val loss decreases from  1.9399 to  1.8997
+2026-11-04 09:45:12: Epoch 14, train loss: 1.6445; val loss: 1.9304; lr: 0.000940, t1: 28.13s, t2: 1.13s
+2026-11-04 09:45:41: Epoch 15, train loss: 1.6457; val loss: 1.9219; lr: 0.000927, t1: 28.25s, t2: 1.14s
+2026-11-04 09:46:10: Epoch 16, train loss: 1.6285; val loss: 1.9152; lr: 0.000914, t1: 28.15s, t2: 1.12s
+2026-11-04 09:46:40: Epoch 17, train loss: 1.6215; val loss: 1.8697; lr: 0.000900, t1: 28.18s, t2: 1.14s
+2026-11-04 09:46:40: Val loss decreases from  1.8997 to  1.8697
+2026-11-04 09:47:09: Epoch 18, train loss: 1.6293; val loss: 1.8703; lr: 0.000884, t1: 28.23s, t2: 1.13s
+2026-11-04 09:47:38: Epoch 19, train loss: 1.6251; val loss: 1.9259; lr: 0.000868, t1: 28.14s, t2: 1.15s
+2026-11-04 09:48:07: Epoch 20, train loss: 1.6098; val loss: 1.8514; lr: 0.000851, t1: 28.04s, t2: 1.12s
+2026-11-04 09:48:07: Val loss decreases from  1.8697 to  1.8514
+2026-11-04 09:48:36: Epoch 21, train loss: 1.6179; val loss: 1.9072; lr: 0.000833, t1: 27.90s, t2: 1.13s
+2026-11-04 09:49:05: Epoch 22, train loss: 1.6147; val loss: 1.8886; lr: 0.000815, t1: 27.93s, t2: 1.14s
+2026-11-04 09:49:35: Epoch 23, train loss: 1.5901; val loss: 1.8691; lr: 0.000795, t1: 27.97s, t2: 1.12s
+2026-11-04 09:50:04: Epoch 24, train loss: 1.5974; val loss: 1.9302; lr: 0.000775, t1: 27.88s, t2: 1.14s
+2026-11-04 09:50:33: Epoch 25, train loss: 1.5929; val loss: 1.9010; lr: 0.000754, t1: 28.00s, t2: 1.13s
+2026-11-04 09:51:02: Epoch 26, train loss: 1.5930; val loss: 1.8577; lr: 0.000733, t1: 27.89s, t2: 1.13s
+2026-11-04 09:51:31: Epoch 27, train loss: 1.5867; val loss: 1.8995; lr: 0.000711, t1: 27.97s, t2: 1.14s
+2026-11-04 09:52:00: Epoch 28, train loss: 1.5690; val loss: 1.8639; lr: 0.000689, t1: 27.94s, t2: 1.13s
+2026-11-04 09:52:29: Epoch 29, train loss: 1.5706; val loss: 1.8766; lr: 0.000666, t1: 27.89s, t2: 1.14s
+2026-11-04 09:52:58: Epoch 30, train loss: 1.5641; val loss: 1.8408; lr: 0.000644, t1: 28.00s, t2: 1.12s
+2026-11-04 09:52:58: Val loss decreases from  1.8514 to  1.8408
+2026-11-04 09:53:27: Epoch 31, train loss: 1.5630; val loss: 1.8143; lr: 0.000620, t1: 27.88s, t2: 1.13s
+2026-11-04 09:53:27: Val loss decreases from  1.8408 to  1.8143
+2026-11-04 09:53:56: Epoch 32, train loss: 1.5604; val loss: 1.8721; lr: 0.000597, t1: 27.96s, t2: 1.14s
+2026-11-04 09:54:25: Epoch 33, train loss: 1.5597; val loss: 1.8348; lr: 0.000574, t1: 27.94s, t2: 1.13s
+2026-11-04 09:54:54: Epoch 34, train loss: 1.5493; val loss: 1.8321; lr: 0.000550, t1: 27.88s, t2: 1.14s
+2026-11-04 09:55:24: Epoch 35, train loss: 1.5477; val loss: 1.8243; lr: 0.000526, t1: 28.20s, t2: 1.13s
+2026-11-04 09:55:53: Epoch 36, train loss: 1.5432; val loss: 1.8137; lr: 0.000503, t1: 28.16s, t2: 1.13s
+2026-11-04 09:55:53: Val loss decreases from  1.8143 to  1.8137
+2026-11-04 09:56:22: Epoch 37, train loss: 1.5353; val loss: 1.8276; lr: 0.000480, t1: 28.25s, t2: 1.14s
+2026-11-04 09:56:52: Epoch 38, train loss: 1.5393; val loss: 1.8183; lr: 0.000456, t1: 28.22s, t2: 1.13s
+2026-11-04 09:57:21: Epoch 39, train loss: 1.5279; val loss: 1.8090; lr: 0.000434, t1: 28.20s, t2: 1.14s
+2026-11-04 09:57:21: Val loss decreases from  1.8137 to  1.8090
+2026-11-04 09:57:50: Epoch 40, train loss: 1.5339; val loss: 1.8094; lr: 0.000411, t1: 28.29s, t2: 1.13s
+2026-11-04 09:58:20: Epoch 41, train loss: 1.5266; val loss: 1.8227; lr: 0.000389, t1: 28.16s, t2: 1.13s
+2026-11-04 09:58:49: Epoch 42, train loss: 1.5294; val loss: 1.8276; lr: 0.000367, t1: 28.26s, t2: 1.14s
+2026-11-04 09:59:18: Epoch 43, train loss: 1.5243; val loss: 1.8209; lr: 0.000346, t1: 28.22s, t2: 1.12s
+2026-11-04 09:59:48: Epoch 44, train loss: 1.5208; val loss: 1.8104; lr: 0.000325, t1: 28.19s, t2: 1.14s
+2026-11-04 10:00:17: Epoch 45, train loss: 1.5180; val loss: 1.8016; lr: 0.000305, t1: 28.26s, t2: 1.12s
+2026-11-04 10:00:17: Val loss decreases from  1.8090 to  1.8016
+2026-11-04 10:00:47: Epoch 46, train loss: 1.5157; val loss: 1.7918; lr: 0.000285, t1: 28.14s, t2: 1.13s
+2026-11-04 10:00:47: Val loss decreases from  1.8016 to  1.7918
+2026-11-04 10:01:16: Epoch 47, train loss: 1.5125; val loss: 1.7913; lr: 0.000267, t1: 28.27s, t2: 1.14s
+2026-11-04 10:01:16: Val loss decreases from  1.7918 to  1.7913
+2026-11-04 10:01:45: Epoch 48, train loss: 1.5147; val loss: 1.8000; lr: 0.000249, t1: 28.20s, t2: 1.13s
+2026-11-04 10:02:15: Epoch 49, train loss: 1.5079; val loss: 1.7929; lr: 0.000232, t1: 28.22s, t2: 1.14s
+2026-11-04 10:02:44: Epoch 50, train loss: 1.5054; val loss: 1.7932; lr: 0.000216, t1: 28.30s, t2: 1.12s
+2026-11-04 10:03:13: Epoch 51, train loss: 1.5036; val loss: 1.8070; lr: 0.000200, t1: 28.18s, t2: 1.14s
+2026-11-04 10:03:43: Epoch 52, train loss: 1.5019; val loss: 1.7942; lr: 0.000186, t1: 28.29s, t2: 1.13s
+2026-11-04 10:04:12: Epoch 53, train loss: 1.4995; val loss: 1.7919; lr: 0.000173, t1: 28.17s, t2: 1.12s
+2026-11-04 10:04:41: Epoch 54, train loss: 1.4977; val loss: 1.7912; lr: 0.000160, t1: 28.19s, t2: 1.14s
+2026-11-04 10:04:41: Val loss decreases from  1.7913 to  1.7912
+2026-11-04 10:05:11: Epoch 55, train loss: 1.4969; val loss: 1.7939; lr: 0.000149, t1: 28.28s, t2: 1.13s
+2026-11-04 10:05:40: Epoch 56, train loss: 1.4934; val loss: 1.7890; lr: 0.000139, t1: 28.16s, t2: 1.13s
+2026-11-04 10:05:40: Val loss decreases from  1.7912 to  1.7890
+2026-11-04 10:06:10: Epoch 57, train loss: 1.4940; val loss: 1.7859; lr: 0.000130, t1: 28.26s, t2: 1.14s
+2026-11-04 10:06:10: Val loss decreases from  1.7890 to  1.7859
+2026-11-04 10:06:39: Epoch 58, train loss: 1.4927; val loss: 1.7826; lr: 0.000122, t1: 28.19s, t2: 1.13s
+2026-11-04 10:06:39: Val loss decreases from  1.7859 to  1.7826
+2026-11-04 10:07:08: Epoch 59, train loss: 1.4909; val loss: 1.7885; lr: 0.000115, t1: 28.18s, t2: 1.14s
+2026-11-04 10:07:38: Epoch 60, train loss: 1.4899; val loss: 1.7848; lr: 0.000110, t1: 28.28s, t2: 1.13s
+2026-11-04 10:08:07: Epoch 61, train loss: 1.4890; val loss: 1.7899; lr: 0.000106, t1: 28.16s, t2: 1.13s
+2026-11-04 10:08:36: Epoch 62, train loss: 1.4897; val loss: 1.7907; lr: 0.000102, t1: 28.23s, t2: 1.14s
+2026-11-04 10:09:06: Epoch 63, train loss: 1.4879; val loss: 1.7891; lr: 0.000101, t1: 28.24s, t2: 1.13s
+2026-11-04 10:09:35: Epoch 64, train loss: 1.4891; val loss: 1.7827; lr: 0.000100, t1: 28.18s, t2: 1.14s
+2026-11-04 10:10:04: Epoch 65, train loss: 1.4872; val loss: 1.7842; lr: 0.000100, t1: 28.29s, t2: 1.13s
+2026-11-04 10:10:34: Epoch 66, train loss: 1.4871; val loss: 1.7840; lr: 0.000100, t1: 28.18s, t2: 1.12s
+2026-11-04 10:11:03: Epoch 67, train loss: 1.4863; val loss: 1.7804; lr: 0.000100, t1: 28.20s, t2: 1.14s
+2026-11-04 10:11:03: Val loss decreases from  1.7826 to  1.7804
+2026-11-04 10:11:33: Epoch 68, train loss: 1.4867; val loss: 1.7843; lr: 0.000100, t1: 28.27s, t2: 1.13s
+2026-11-04 10:12:02: Epoch 69, train loss: 1.4851; val loss: 1.7854; lr: 0.000100, t1: 28.17s, t2: 1.14s
+2026-11-04 10:12:31: Epoch 70, train loss: 1.4845; val loss: 1.7771; lr: 0.000100, t1: 28.28s, t2: 1.14s
+2026-11-04 10:12:31: Val loss decreases from  1.7804 to  1.7771
+2026-11-04 10:13:01: Epoch 71, train loss: 1.4849; val loss: 1.7926; lr: 0.000100, t1: 28.21s, t2: 1.13s
+2026-11-04 10:13:30: Epoch 72, train loss: 1.4844; val loss: 1.7840; lr: 0.000100, t1: 28.19s, t2: 1.14s
+2026-11-04 10:13:59: Epoch 73, train loss: 1.4840; val loss: 1.7809; lr: 0.000100, t1: 27.99s, t2: 1.12s
+2026-11-04 10:14:28: Epoch 74, train loss: 1.4830; val loss: 1.7813; lr: 0.000100, t1: 27.89s, t2: 1.13s
+2026-11-04 10:14:57: Epoch 75, train loss: 1.4839; val loss: 1.7806; lr: 0.000100, t1: 28.01s, t2: 1.14s
+2026-11-04 10:15:26: Epoch 76, train loss: 1.4840; val loss: 1.7775; lr: 0.000100, t1: 27.94s, t2: 1.13s
+2026-11-04 10:15:55: Epoch 77, train loss: 1.4831; val loss: 1.7867; lr: 0.000100, t1: 27.90s, t2: 1.15s
+2026-11-04 10:16:25: Epoch 78, train loss: 1.4838; val loss: 1.7774; lr: 0.000100, t1: 28.02s, t2: 1.13s
+2026-11-04 10:16:54: Epoch 79, train loss: 1.4824; val loss: 1.7815; lr: 0.000100, t1: 27.91s, t2: 1.12s
+2026-11-04 10:17:23: Epoch 80, train loss: 1.4833; val loss: 1.7807; lr: 0.000100, t1: 27.94s, t2: 1.14s
+2026-11-04 10:17:52: Epoch 81, train loss: 1.4816; val loss: 1.7847; lr: 0.000100, t1: 28.01s, t2: 1.13s
+2026-11-04 10:18:21: Epoch 82, train loss: 1.4825; val loss: 1.7797; lr: 0.000100, t1: 27.88s, t2: 1.13s
+2026-11-04 10:18:50: Epoch 83, train loss: 1.4826; val loss: 1.7793; lr: 0.000100, t1: 28.00s, t2: 1.14s
+2026-11-04 10:19:19: Epoch 84, train loss: 1.4810; val loss: 1.7827; lr: 0.000100, t1: 27.94s, t2: 1.12s
+2026-11-04 10:19:48: Epoch 85, train loss: 1.4815; val loss: 1.7778; lr: 0.000100, t1: 27.92s, t2: 1.14s
+2026-11-04 10:20:17: Epoch 86, train loss: 1.4810; val loss: 1.7874; lr: 0.000100, t1: 28.00s, t2: 1.13s
+2026-11-04 10:20:46: Epoch 87, train loss: 1.4818; val loss: 1.7794; lr: 0.000100, t1: 27.87s, t2: 1.12s
+2026-11-04 10:21:15: Epoch 88, train loss: 1.4811; val loss: 1.7776; lr: 0.000100, t1: 27.95s, t2: 1.14s
+2026-11-04 10:21:44: Epoch 89, train loss: 1.4799; val loss: 1.7790; lr: 0.000100, t1: 27.94s, t2: 1.13s
+2026-11-04 10:22:13: Epoch 90, train loss: 1.4797; val loss: 1.7766; lr: 0.000100, t1: 27.87s, t2: 1.15s
+2026-11-04 10:22:13: Val loss decreases from  1.7771 to  1.7766
+2026-11-04 10:22:43: Epoch 91, train loss: 1.4794; val loss: 1.7869; lr: 0.000100, t1: 28.00s, t2: 1.13s
+2026-11-04 10:23:12: Epoch 92, train loss: 1.4808; val loss: 1.7845; lr: 0.000100, t1: 27.90s, t2: 1.12s
+2026-11-04 10:23:41: Epoch 93, train loss: 1.4795; val loss: 1.7759; lr: 0.000100, t1: 27.91s, t2: 1.14s
+2026-11-04 10:23:41: Val loss decreases from  1.7766 to  1.7759
+2026-11-04 10:24:10: Epoch 94, train loss: 1.4794; val loss: 1.7825; lr: 0.000100, t1: 27.98s, t2: 1.12s
+2026-11-04 10:24:39: Epoch 95, train loss: 1.4789; val loss: 1.7813; lr: 0.000100, t1: 27.88s, t2: 1.13s
+2026-11-04 10:25:08: Epoch 96, train loss: 1.4788; val loss: 1.7897; lr: 0.000100, t1: 27.99s, t2: 1.13s
+2026-11-04 10:25:37: Epoch 97, train loss: 1.4789; val loss: 1.7756; lr: 0.000100, t1: 27.93s, t2: 1.13s
+2026-11-04 10:25:37: Val loss decreases from  1.7759 to  1.7756
+2026-11-04 10:26:06: Epoch 98, train loss: 1.4790; val loss: 1.7808; lr: 0.000100, t1: 27.91s, t2: 1.14s
+2026-11-04 10:26:35: Epoch 99, train loss: 1.4784; val loss: 1.7785; lr: 0.000100, t1: 28.01s, t2: 1.13s
+2026-11-04 10:27:04: Epoch 100, train loss: 1.4782; val loss: 1.7808; lr: 0.000100, t1: 27.88s, t2: 1.13s
+2026-11-04 10:27:33: Epoch 101, train loss: 1.4771; val loss: 1.7785; lr: 0.000100, t1: 27.95s, t2: 1.14s
+2026-11-04 10:28:02: Epoch 102, train loss: 1.4767; val loss: 1.7782; lr: 0.000100, t1: 27.93s, t2: 1.13s
+2026-11-04 10:28:31: Epoch 103, train loss: 1.4786; val loss: 1.7801; lr: 0.000100, t1: 27.86s, t2: 1.14s
+2026-11-04 10:29:00: Epoch 104, train loss: 1.4765; val loss: 1.7810; lr: 0.000100, t1: 27.99s, t2: 1.13s
+2026-11-04 10:29:29: Epoch 105, train loss: 1.4756; val loss: 1.7782; lr: 0.000100, t1: 27.89s, t2: 1.13s
+2026-11-04 10:29:58: Epoch 106, train loss: 1.4768; val loss: 1.7823; lr: 0.000100, t1: 27.91s, t2: 1.14s
+2026-11-04 10:30:28: Epoch 107, train loss: 1.4747; val loss: 1.7859; lr: 0.000100, t1: 27.95s, t2: 1.12s
+2026-11-04 10:30:57: Epoch 108, train loss: 1.4752; val loss: 1.7861; lr: 0.000100, t1: 27.87s, t2: 1.13s
+2026-11-04 10:31:26: Epoch 109, train loss: 1.4743; val loss: 1.7804; lr: 0.000100, t1: 27.97s, t2: 1.14s
+2026-11-04 10:31:55: Epoch 110, train loss: 1.4750; val loss: 1.7713; lr: 0.000100, t1: 27.93s, t2: 1.13s
+2026-11-04 10:31:55: Val loss decreases from  1.7756 to  1.7713
+2026-11-04 10:32:24: Epoch 111, train loss: 1.4741; val loss: 1.7841; lr: 0.000100, t1: 27.90s, t2: 1.14s
+2026-11-04 10:32:53: Epoch 112, train loss: 1.4751; val loss: 1.7782; lr: 0.000100, t1: 28.00s, t2: 1.12s
+2026-11-04 10:33:22: Epoch 113, train loss: 1.4743; val loss: 1.7791; lr: 0.000100, t1: 27.87s, t2: 1.13s
+2026-11-04 10:33:51: Epoch 114, train loss: 1.4744; val loss: 1.7816; lr: 0.000100, t1: 27.93s, t2: 1.14s
+2026-11-04 10:34:20: Epoch 115, train loss: 1.4726; val loss: 1.7766; lr: 0.000100, t1: 27.95s, t2: 1.12s
+2026-11-04 10:34:49: Epoch 116, train loss: 1.4736; val loss: 1.7817; lr: 0.000100, t1: 27.85s, t2: 1.14s
+2026-11-04 10:35:18: Epoch 117, train loss: 1.4736; val loss: 1.7756; lr: 0.000100, t1: 27.95s, t2: 1.12s
+2026-11-04 10:35:47: Epoch 118, train loss: 1.4739; val loss: 1.7787; lr: 0.000100, t1: 27.87s, t2: 1.12s
+2026-11-04 10:36:16: Epoch 119, train loss: 1.4720; val loss: 1.7777; lr: 0.000100, t1: 27.91s, t2: 1.14s
+2026-11-04 10:36:16: Completed 120/120 epochs; start to evaluate
+2026-11-04 10:36:19: prediction on 1 steps, MAE:  3.2949, RMSE:  5.1048, MAPE:  24.5945

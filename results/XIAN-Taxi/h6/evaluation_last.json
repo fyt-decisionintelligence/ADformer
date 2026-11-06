@@ -1,0 +1,21 @@
+{
+  "dataset": "XIAN-Taxi",
+  "horizon": 6,
+  "prediction_minutes": 180,
+  "epoch": 120,
+  "checkpoint": "log/ADFormer/XIAN-Taxi/full_20261104_144924_XIAN-Taxi_gpu1_w6_h6_epochs120_bs64/model_last_state.pth",
+  "checkpoint_sha256": "9a91b3d18f2ef107bda0c4c631b55fb4edcc97ecdc1ee2b8b4d3d4d4c810fda8",
+  "physical_gpu": 0,
+  "output_directory": "log/ADFormer/XIAN-Taxi/full_20261104_144924_XIAN-Taxi_gpu1_w6_h6_epochs120_bs64/last_epoch_test/last_epoch120_20261104_155756",
+  "MAE": 5.456833362579346,
+  "RMSE": 10.060229301452637,
+  "MAPE_percent": 27.58133113384247,
+  "prediction_shape": [
+    583,
+    6,
+    135,
+    2
+  ],
+  "metric_mask": 0.5,
+  "mape_mask": 5.0
+}

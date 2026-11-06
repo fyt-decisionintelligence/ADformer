@@ -1,0 +1,21 @@
+{
+  "dataset": "NYC-Taxi",
+  "horizon": 6,
+  "prediction_minutes": 180,
+  "epoch": 120,
+  "checkpoint": "log/ADFormer/NYC-Taxi/full_20261104_144924_NYC-Taxi_gpu2_w6_h6_epochs120_bs64/model_last_state.pth",
+  "checkpoint_sha256": "c865aa69f27a6fb38b09ed78054787e12ddec4469a47d550a0e32cf758c235bd",
+  "physical_gpu": 1,
+  "output_directory": "log/ADFormer/NYC-Taxi/full_20261104_144924_NYC-Taxi_gpu2_w6_h6_epochs120_bs64/last_epoch_test/last_epoch120_20261104_155756",
+  "MAE": 6.8398637771606445,
+  "RMSE": 15.119797706604004,
+  "MAPE_percent": 21.994483470916748,
+  "prediction_shape": [
+    3511,
+    6,
+    263,
+    2
+  ],
+  "metric_mask": 0.5,
+  "mape_mask": 5.0
+}
